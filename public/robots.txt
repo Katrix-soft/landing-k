@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://katrix.com.ar/sitemap.xml
