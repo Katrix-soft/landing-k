@@ -80,11 +80,10 @@ const Contact: React.FC = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-pearl-bush mb-6">
-            Hablemos de tu Proyecto
+            Si tiene sentido hablar, hablemos.
           </h2>
           <p className="text-xl text-friar-gray max-w-3xl mx-auto mb-8">
-            Estamos listos para transformar tu visión en realidad. Completa el formulario 
-            y nuestro equipo de expertos se pondrá en contacto contigo en menos de 24 horas.
+            Respondemos dentro de las 24 horas hábiles.
           </p>
           <div className="w-24 h-1 gradient-accent mx-auto rounded-full mt-6"></div>
         </div>

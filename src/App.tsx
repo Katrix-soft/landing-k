@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import ServiceDetails from './components/ServiceDetail';
+import Cierre from './components/Cierre';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -16,7 +16,7 @@ function App() {
       <Navigation />
       <Hero />
       <Services />
-      <ServiceDetails />
+      <Cierre />
       <Contact />
       <Footer />
     </div>
