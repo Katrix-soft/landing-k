@@ -1,0 +1,170 @@
+<section id="contacto" class="py-24 px-4 relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-black-pearl via-slate-900 to-black-pearl"></div>
+
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-chill/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-surfie-green/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto max-w-7xl relative z-10">
+        <div class="mb-12 animate-fade-in-up">
+            <h2 class="text-sm font-semibold tracking-widest text-blue-chill uppercase mb-4">
+                Contacto
+            </h2>
+            <div class="w-24 h-1 gradient-accent rounded-full mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Información de contacto -->
+            <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+                <div
+                    class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-pearl-bush mb-8">
+                        Información de Contacto
+                    </h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-chill to-surfie-green rounded-full mr-4 flex-shrink-0">
+                                <lucide-icon [name]="Mail" class="w-6 h-6 text-white"></lucide-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-pearl-bush font-semibold mb-1">Email</h4>
+                                <p class="text-friar-gray">contacto@katrix.com.ar</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-chill to-surfie-green rounded-full mr-4 flex-shrink-0">
+                                <lucide-icon [name]="MapPin" class="w-6 h-6 text-white"></lucide-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-pearl-bush font-semibold mb-1">Ubicación</h4>
+                                <p class="text-friar-gray">Mendoza, Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-8 p-6 bg-gradient-to-r from-blue-chill/20 to-surfie-green/20 rounded-xl border border-blue-chill/30">
+                        <h4 class="text-pearl-bush font-semibold mb-2">¿Necesitas una respuesta urgente?</h4>
+                        <p class="text-friar-gray text-sm mb-4">
+                            Para consultas urgentes, contáctanos directamente por WhatsApp y te responderemos en
+                            minutos.
+                        </p>
+                        <a href="https://wa.me/5492616557673?text=Hola%2C%20es%20urgente%2C%20necesito%20contactarme%20ya."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-chill hover:text-surfie-green font-medium transition-colors duration-300">
+                            Contactar por WhatsApp →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="animate-fade-in-up" style="animation-delay: 0.4s">
+                <div
+                    class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-pearl-bush mb-8">
+                        Envíanos un Mensaje
+                    </h3>
+
+                    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="space-y-6">
+                        <!-- Campo Nombre -->
+                        <div class="relative">
+                            <input type="text" name="name" [(ngModel)]="formData.name" (focus)="onFocus('name')"
+                                (blur)="onBlur()" required
+                                class="w-full bg-slate-900/50 border-2 border-slate-600/50 rounded-xl px-4 py-4 text-pearl-bush placeholder-transparent focus:border-blue-chill focus:outline-none transition-all duration-300"
+                                placeholder="Nombre y organización" aria-label="Nombre y organización" />
+                            <label class="absolute left-4 transition-all duration-300 pointer-events-none"
+                                [class.top-2]="isLabelActive('name')" [class.text-xs]="isLabelActive('name')"
+                                [class.text-blue-chill]="isLabelActive('name')" [class.top-1-2]="!isLabelActive('name')"
+                                [class.-translate-y-1-2]="!isLabelActive('name')"
+                                [class.text-friar-gray]="!isLabelActive('name')"
+                                [style.top]="!isLabelActive('name') ? '50%' : ''">
+                                Nombre y organización
+                            </label>
+                        </div>
+
+                        <!-- Campo Email -->
+                        <div class="relative">
+                            <input type="email" name="email" [(ngModel)]="formData.email" (focus)="onFocus('email')"
+                                (blur)="onBlur()" required
+                                class="w-full bg-slate-900/50 border-2 border-slate-600/50 rounded-xl px-4 py-4 text-pearl-bush placeholder-transparent focus:border-blue-chill focus:outline-none transition-all duration-300"
+                                placeholder="Correo electrónico" aria-label="Correo electrónico" />
+                            <label class="absolute left-4 transition-all duration-300 pointer-events-none"
+                                [class.top-2]="isLabelActive('email')" [class.text-xs]="isLabelActive('email')"
+                                [class.text-blue-chill]="isLabelActive('email')"
+                                [class.top-1-2]="!isLabelActive('email')"
+                                [class.-translate-y-1-2]="!isLabelActive('email')"
+                                [class.text-friar-gray]="!isLabelActive('email')"
+                                [style.top]="!isLabelActive('email') ? '50%' : ''">
+                                Correo electrónico
+                            </label>
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div class="relative">
+                            <textarea name="message" [(ngModel)]="formData.message" (focus)="onFocus('message')"
+                                (blur)="onBlur()" required rows="6"
+                                class="w-full bg-slate-900/50 border-2 border-slate-600/50 rounded-xl px-4 py-4 text-pearl-bush placeholder-transparent focus:border-blue-chill focus:outline-none resize-none transition-all duration-300"
+                                placeholder="¿Qué necesitan resolver?" aria-label="Mensaje"></textarea>
+                            <label class="absolute left-4 transition-all duration-300 pointer-events-none"
+                                [class.top-2]="isLabelActive('message')" [class.text-xs]="isLabelActive('message')"
+                                [class.text-blue-chill]="isLabelActive('message')"
+                                [class.top-4]="!isLabelActive('message')"
+                                [class.text-friar-gray]="!isLabelActive('message')">
+                                ¿Qué necesitan resolver?
+                            </label>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <button type="submit" [disabled]="status() === 'sending'"
+                            class="w-full btn-primary inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed text-lg py-4"
+                            aria-label="Enviar mensaje">
+                            @if (status() === 'sending') {
+                            <div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin">
+                            </div>
+                            Enviando mensaje...
+                            } @else {
+                            <lucide-icon [name]="Send" class="w-5 h-5"></lucide-icon>
+                            Enviar
+                            }
+                        </button>
+                        
+                        <p class="text-friar-gray text-sm text-center mt-4">
+                            Respondemos dentro de las 24 horas hábiles.
+                        </p>
+
+                        <!-- Mensajes de estado -->
+                        @if (status() === 'success') {
+                        <div
+                            class="bg-green-900/30 border border-green-500/50 rounded-xl p-6 text-center animate-fade-in-up">
+                            <lucide-icon [name]="CheckCircle" class="w-8 h-8 text-green-400 mx-auto mb-3"></lucide-icon>
+                            <h4 class="text-green-300 font-semibold mb-2">¡Mensaje enviado con éxito!</h4>
+                            <p class="text-green-300/80">
+                                Hemos recibido tu mensaje y nuestro equipo se pondrá en contacto contigo en menos de 24
+                                horas.
+                            </p>
+                        </div>
+                        }
+
+                        @if (status() === 'error') {
+                        <div
+                            class="bg-red-900/30 border border-red-500/50 rounded-xl p-6 text-center animate-fade-in-up">
+                            <lucide-icon [name]="AlertCircle" class="w-8 h-8 text-red-400 mx-auto mb-3"></lucide-icon>
+                            <h4 class="text-red-300 font-semibold mb-2">Error al enviar el mensaje</h4>
+                            <p class="text-red-300/80">
+                                Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente o contáctanos
+                                directamente.
+                            </p>
+                        </div>
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

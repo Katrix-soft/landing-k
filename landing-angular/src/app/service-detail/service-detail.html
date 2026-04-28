@@ -1,0 +1,85 @@
+@for (service of services; track service.id) {
+<section [id]="service.id" class="py-16 px-4 relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-black-pearl"></div>
+
+    <div class="container mx-auto relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12 animate-fade-in-up">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-chill to-surfie-green rounded-full mb-6">
+                    <lucide-icon [name]="service.icon" class="w-8 h-8 text-white"></lucide-icon>
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-pearl-bush mb-4">
+                    {{ service.title }}
+                </h2>
+                <p class="text-xl text-blue-chill font-medium mb-6">
+                    {{ service.subtitle }}
+                </p>
+                <div class="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Text Content -->
+                <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+                    <p class="text-lg text-friar-gray leading-relaxed mb-8">
+                        {{ service.description }}
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-pearl-bush mb-6">
+                        Beneficios Clave
+                    </h3>
+
+                    <div class="space-y-4 mb-8">
+                        @for (benefit of service.benefits; track benefit) {
+                        <div class="flex items-start">
+                            <lucide-icon [name]="CheckCircle"
+                                class="w-6 h-6 text-blue-chill mr-3 mt-0.5 flex-shrink-0"></lucide-icon>
+                            <span class="text-pearl-bush">{{ benefit }}</span>
+                        </div>
+                        }
+                    </div>
+
+                    <button (click)="handleCTAClick()" class="btn-primary inline-flex items-center gap-2">
+                        {{ service.ctaText }}
+                        <lucide-icon [name]="ArrowRight" class="w-5 h-5"></lucide-icon>
+                    </button>
+                </div>
+
+                <!-- Image -->
+                <div class="animate-fade-in-up" style="animation-delay: 0.4s">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img [src]="service.imageUrl" [alt]="service.title" class="w-full h-80 object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black-pearl/60 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process & Technologies -->
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Process -->
+                <div class="animate-fade-in-up max-w-4xl mx-auto" style="animation-delay: 0.6s">
+                    <h3 class="text-2xl font-bold text-pearl-bush mb-8">
+                        Nuestro Proceso
+                    </h3>
+
+                    <div class="space-y-6">
+                        @for (step of service.process; track step; let i = $index) {
+                        <div class="flex items-start">
+                            <div
+                                class="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-chill to-surfie-green rounded-full mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">{{ i + 1 }}</span>
+                            </div>
+                            <div>
+                                <p class="text-pearl-bush">{{ step }}</p>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}
