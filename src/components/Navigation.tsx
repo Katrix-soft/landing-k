@@ -34,7 +34,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#03131d] border-b border-slate-700/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black-pearl/95 backdrop-blur-md border-b border-slate-700/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -69,7 +69,7 @@ const Navigation: React.FC = () => {
               onClick={() => scrollToSection('#contacto')}
               className="modern-btn-primary group text-sm px-6 py-2.5"
             >
-              Comenzar
+              Iniciar conversación
             </button>
           </div>
 
@@ -101,7 +101,7 @@ const Navigation: React.FC = () => {
                 onClick={() => scrollToSection('#contacto')}
                 className="modern-btn-primary group w-full text-sm px-6 py-3 mt-4"
               >
-                Comenzar
+                Iniciar conversación
               </button>
             </div>
           </div>

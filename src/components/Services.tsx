@@ -88,12 +88,14 @@ const Services: React.FC = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-pearl-bush mb-6">
-            Nuestras Soluciones
+            Lo que hacemos
           </h2>
-          <p className="text-xl text-friar-gray max-w-3xl mx-auto mb-8">
-            Transformamos tu negocio con tecnología de vanguardia y soluciones personalizadas 
-            que impulsan el crecimiento y la eficiencia operativa.
-          </p>
+          <div className="text-xl text-friar-gray max-w-3xl mx-auto mb-8">
+            <h3 className="text-2xl font-semibold text-blue-chill mb-4 flex justify-center items-center gap-2">
+              <span className="text-surfie-green">▶</span> Automatizamos lo que te quita tiempo
+            </h3>
+            <p>Tareas repetitivas, flujos manuales, datos dispersos — procesos que corren solos.</p>
+          </div>
           <div className="w-24 h-1 gradient-accent mx-auto rounded-full"></div>
         </div>
         

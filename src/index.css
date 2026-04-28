@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  --black-pearl: #04141c;
-  --pearl-bush: #e6dfd0;
-  --blue-chill: #0f9195;
-  --surfie-green: #0b7880;
-  --friar-gray: #7c7c7a;
+  --black-pearl: #0A0F1C;
+  --pearl-bush: #E5E7EB;
+  --blue-chill: #22D3EE;
+  --surfie-green: #67E8F9;
+  --friar-gray: #94A3B8;
 }
 
 @layer base {

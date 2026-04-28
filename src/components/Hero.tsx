@@ -43,25 +43,22 @@ const Hero: React.FC = () => {
           {/* Título principal */}
           <div className="mb-8 md:mb-12 animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 font-mono">
+              <span className="block text-blue-chill text-sm sm:text-base md:text-lg tracking-widest uppercase mb-4 md:mb-6 font-sans font-semibold">
+                Software · Automatización · Procesos
+              </span>
               <span className="block text-pearl-bush mb-2 md:mb-3 tracking-wider">
-                BIENVENIDO
+                Tu negocio crece.
               </span>
               <span className="block gradient-accent bg-clip-text text-transparent tracking-wider">
-                A KATRIX
+                Tu tecnología también.
               </span>
             </h1>
           </div>
           
           {/* Subtítulo */}
           <div className="mb-8 md:mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-pearl-bush/90 mb-6 font-light tracking-wide font-mono">
-              Digitalizamos el Futuro de tu Negocio
-            </p>
-            
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-friar-gray max-w-4xl mx-auto leading-relaxed font-light font-sans">
-              Desde Mendoza, Argentina, creamos soluciones de automatización y datos que 
-              impulsan tu crecimiento empresarial. Transformamos procesos complejos en 
-              sistemas eficientes y escalables.
+              No somos una fábrica de software. Somos el equipo que se sienta con vos, entiende cómo trabajás, y convierte esos procesos en tecnología que escala con tu empresa — sin fricciones, sin genéricos, sin misterios.
             </p>
           </div>
           
@@ -73,17 +70,26 @@ const Hero: React.FC = () => {
               aria-label="Ir a la sección de contacto para comenzar tu transformación digital"
             >
               <span className="flex items-center justify-center gap-3">
-                Comienza tu Transformación
+                Iniciar conversación
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </button>
-            
-            <button 
-              onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-              className="modern-btn-secondary group text-lg px-10 py-4 w-full sm:w-auto"
-            >
-              Conocer Servicios
-            </button>
+          </div>
+          
+          {/* Estadísticas */}
+          <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-pearl-bush/10 pt-12 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            <div className="text-center">
+              <p className="text-4xl font-bold gradient-accent bg-clip-text text-transparent mb-2">−87%</p>
+              <p className="text-friar-gray text-sm uppercase tracking-wider">reducción en tiempos operativos</p>
+            </div>
+            <div className="text-center">
+              <p className="text-4xl font-bold gradient-accent bg-clip-text text-transparent mb-2">100%</p>
+              <p className="text-friar-gray text-sm uppercase tracking-wider">proyectos entregados dentro de alcance</p>
+            </div>
+            <div className="text-center">
+              <p className="text-4xl font-bold gradient-accent bg-clip-text text-transparent mb-2">día 1</p>
+              <p className="text-friar-gray text-sm uppercase tracking-wider">los sistemas funcionan desde el lanzamiento</p>
+            </div>
           </div>
         </div>
       </div>
